@@ -5,11 +5,11 @@ import re
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/api")
 def read_root():
     return {"status": "Render Proxy is running"}
 
-@app.get("/tenders/full-sync")
+@app.get("/api/tenders/full-sync")
 def full_sync(page: int = 1):
     try:
         headers = {
